@@ -50,6 +50,18 @@ public class Student extends Person {
         this.studentNumber = studentNumber;
     }
 
+    /**
+     * Overloaded constructor to include assignments. (Used for EditStudentCommand)
+     */
+    public Student(Name name, Phone phone, TutorialGroup tutorialGroup,
+                   StudentNumber studentNumber, ObservableList<Assignment> assignments) {
+        super(name, phone, DUMMY_EMAIL, DUMMY_ADDRESS, DUMMY_TAG);
+        requireAllNonNull(tutorialGroup, studentNumber);
+        this.tutorialGroup = tutorialGroup;
+        this.studentNumber = studentNumber;
+        this.assignments.addAll(assignments);
+    }
+
     public TutorialGroup getTutorialGroup() {
         return tutorialGroup;
     }
@@ -116,6 +128,8 @@ public class Student extends Person {
         PersonAttendance attendance = new PersonAttendance(status);
         attendanceRecords.put(date, attendance);
     }
+
+    //getters
 
     public PersonAttendance getAttendance(LocalDate date) {
         return attendanceRecords.get(date);
