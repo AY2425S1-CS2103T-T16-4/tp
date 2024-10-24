@@ -140,7 +140,13 @@ public interface Model {
     void updateFilteredStudentList(Predicate<Student> predicate);
 
     /**
+     * Deletes all students currently in the address book.
+     */
+    void deleteAllStudents();
+
+    /**
      * Returns a list of students in the given tutorial group.
      */
     List<Student> getStudentsByTutorialGroup(TutorialGroup tutorialGroup);
+
 }

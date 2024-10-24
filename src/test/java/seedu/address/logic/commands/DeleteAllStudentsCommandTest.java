@@ -2,73 +2,56 @@ package seedu.address.logic.commands;
 
 import static java.util.Objects.requireNonNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static seedu.address.testutil.Assert.assertThrows;
 
 import java.nio.file.Path;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
 import org.junit.jupiter.api.Test;
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import seedu.address.commons.core.GuiSettings;
-import seedu.address.logic.commands.exceptions.CommandException;
-import seedu.address.model.AddressBook;
 import seedu.address.model.Model;
 import seedu.address.model.ReadOnlyAddressBook;
 import seedu.address.model.ReadOnlyUserPrefs;
-import seedu.address.model.attendance.Attendance;
 import seedu.address.model.person.Name;
 import seedu.address.model.person.Person;
 import seedu.address.model.student.Student;
 import seedu.address.model.student.TutorialGroup;
 import seedu.address.testutil.StudentBuilder;
 
-public class MarkAttendanceCommandTest {
-
+public class DeleteAllStudentsCommandTest {
     @Test
-    public void execute_studentFound_success() throws Exception {
-        Student validStudent = new StudentBuilder().withName("John").build();
+    public void execute_deleteSingleStudent_success() throws Exception {
+        Student validStudent = new StudentBuilder().withName("John Ng").withStudentNumber("A0123456L").build();
+
         ModelStubWithStudent modelStub = new ModelStubWithStudent(validStudent);
-        modelStub.addStudent(validStudent);
 
-        Attendance attendance = new Attendance("p");
-        LocalDate date = LocalDate.of(2023, 10, 9);
-        MarkAttendanceCommand command = new MarkAttendanceCommand(new Name("John"), date, attendance);
+        CommandResult commandResult = new DeleteAllStudentsCommand().execute(modelStub);
 
-        CommandResult result = command.execute(modelStub);
-
-        assertEquals(String.format(MarkAttendanceCommand.MESSAGE_SUCCESS,
-                validStudent.getName(), attendance,
-                DateTimeFormatter.ofPattern("MMM d yyyy").format(date)), result.getFeedbackToUser());
-        assertEquals(String.format(MarkAttendanceCommand.MESSAGE_SUCCESS, validStudent.getName(), attendance,
-                DateTimeFormatter.ofPattern("MMM d yyyy").format(date)), result.getFeedbackToUser());
+        assertEquals(DeleteAllStudentsCommand.MESSAGE_DELETE_STUDENT_SUCCESS, commandResult.getFeedbackToUser());
     }
 
     @Test
-    public void execute_studentNotFound_throwsCommandException() {
-        ModelStubWithNoStudent modelStub = new ModelStubWithNoStudent();
-        Attendance attendance = new Attendance("p");
-        LocalDate date = LocalDate.of(2023, 10, 9);
-        MarkAttendanceCommand command = new MarkAttendanceCommand(new Name("John"), date, attendance);
+    public void execute_deleteMultipleStudents_success() throws Exception {
+        Student validStudent1 = new StudentBuilder().withName("John Ng").withStudentNumber("A1234567X").build();
+        Student validStudent2 = new StudentBuilder().withName("May Ng Zi Wei").withStudentNumber("A0123456Y").build();
+        Student validStudent3 = new StudentBuilder().withName("Lynn Han").withStudentNumber("A9876543Z").build();
+        Student validStudent4 = new StudentBuilder().withName("Richard").withStudentNumber("A1111111B").build();
 
-        assertThrows(CommandException.class, "Student not found: John", () -> command.execute(modelStub));
+        ModelStubWithStudent modelStub = new ModelStubWithStudent(validStudent1, validStudent2,
+                validStudent3, validStudent4);
+
+        CommandResult commandResult = new DeleteAllStudentsCommand().execute(modelStub);
+
+        assertEquals(DeleteAllStudentsCommand.MESSAGE_DELETE_STUDENT_SUCCESS, commandResult.getFeedbackToUser());
     }
-
-    @Test
-    public void execute_invalidAttendanceStatus_throwsCommandException() {
-        ModelStubAcceptingStudentAdded modelStub = new ModelStubAcceptingStudentAdded();
-        Student validStudent = new StudentBuilder().withName("John Doe").build();
-        modelStub.addStudent(validStudent);
-
-        assertThrows(IllegalArgumentException.class, () -> new Attendance("unknown"));
-    }
-
 
     private class ModelStub implements Model {
+
+        private final ObservableList<Student> studentList = FXCollections.observableArrayList();
+
         @Override
         public void setUserPrefs(ReadOnlyUserPrefs userPrefs) {
             throw new AssertionError("This method should not be called.");
@@ -171,13 +154,11 @@ public class MarkAttendanceCommandTest {
         }
 
         @Override
-        public void deleteAllStudents() {
-            throw new AssertionError("This method should not be called.");
+        public ObservableList<Student> getFilteredStudentList() {
+            return studentList;
         }
 
-        @Override
-        public ObservableList<Student> getFilteredStudentList() {
-            throw new AssertionError("This method should not be called.");
+        public void deleteAllStudents() {
         }
 
         @Override
@@ -194,72 +175,59 @@ public class MarkAttendanceCommandTest {
         public List<Student> getStudentsByTutorialGroup(TutorialGroup tutorialGroup) {
             throw new AssertionError("This method should not be called.");
         }
-
-
-
     }
 
     /**
      * A Model stub that contains a single student.
      */
-    private class ModelStubWithStudent extends ModelStub {
-        private final Student student;
+    private class ModelStubWithStudent extends DeleteAllStudentsCommandTest.ModelStub {
 
-        ModelStubWithStudent(Student student) {
-            requireNonNull(student);
-            this.student = student;
+        private final ObservableList<Student> students = FXCollections.observableArrayList();
+
+        ModelStubWithStudent(Student... students) {
+            this.students.addAll(students);
         }
 
         @Override
         public Student getStudentByName(Name name) {
             requireNonNull(name);
-            if (this.student.getName().equals(name)) {
-                return this.student;
-            }
-            return null; // No student found with this name
+            return students.stream()
+                    .filter(student -> student.getName().equals(name))
+                    .findFirst()
+                    .orElse(null); // Return null if no student is found with this name
+        }
+
+        @Override
+        public ObservableList<Student> getFilteredStudentList() {
+            return students;
+        }
+
+        @Override
+        public void addStudent(Student student) {
+            requireNonNull(student);
+            students.add(student);
         }
 
         @Override
         public boolean hasStudent(Student student) {
             requireNonNull(student);
-            return this.student.isSamePerson(student);
+            return students.stream().anyMatch(student::isSamePerson);
         }
 
         @Override
-        public void addStudent(Student student) {
-            requireNonNull(student);
+        public int deleteStudent(Student target) {
+            requireNonNull(target);
+            students.remove(target);
+            return 1;
         }
 
     }
 
-
-    /**
-     * A Model stub that always accept the student being added.
-     */
-    private class ModelStubAcceptingStudentAdded extends ModelStub {
-        final ArrayList<Person> studentsAdded = new ArrayList<>();
-
+    private class ModelStubWithNoStudent extends DeleteAllStudentsCommandTest.ModelStub {
         @Override
-        public boolean hasStudent(Student student) {
-            requireNonNull(student);
-            // Student student = (Student) person;
-            return studentsAdded.stream().map(p -> (Student) p).anyMatch(student::isSameStudent);
+        public ObservableList<Student> getFilteredStudentList() {
+            return FXCollections.observableArrayList();
         }
-
-
-        @Override
-        public void addStudent(Student student) {
-            requireNonNull(student);
-            studentsAdded.add(student);
-        }
-
-        @Override
-        public ReadOnlyAddressBook getAddressBook() {
-            return new AddressBook();
-        }
-    }
-
-    private class ModelStubWithNoStudent extends ModelStub {
         @Override
         public Student getStudentByName(Name name) {
             return null;
