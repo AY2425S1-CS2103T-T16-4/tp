@@ -117,7 +117,7 @@
         "editing-a-person-edits": "Editing a person : edits",
         "undoing-the-previous-command-undo": "Undoing the previous command : undo",
         "locating-persons-by-name-find": "Locating persons by name: find",
-        "deleting-a-person-delete": "Deleting a person : delete",
+        "deleting-a-specific-student-deletes": "Deleting a specific student : deletes",
         "clearing-all-entries-clear": "Clearing all entries : clear",
         "exiting-the-program-exit": "Exiting the program : exit",
         "marking-attendance-markat": "Marking Attendance : markat",
