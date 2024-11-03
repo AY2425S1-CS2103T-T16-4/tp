@@ -116,6 +116,7 @@
         "listing-all-persons-list": "Listing all persons : list",
         "editing-a-person-edits": "Editing a person : edits",
         "undoing-the-previous-command-undo": "Undoing the previous command : undo",
+        "locating-person-by-name-view": "Locating person by name: view",
         "locating-persons-by-name-find": "Locating persons by name: find",
         "deleting-a-specific-student-deletes": "Deleting a specific student : deletes",
         "clearing-all-entries-clear": "Clearing all entries : clear",
