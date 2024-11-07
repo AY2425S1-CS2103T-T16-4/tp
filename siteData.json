@@ -51,7 +51,6 @@
         "storage-component": "Storage component",
         "common-classes": "Common classes",
         "implementation": "Implementation",
-        "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",
         "proposed-data-archiving": "[Proposed] Data archiving",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
         "appendix-requirements": "Appendix: Requirements",
@@ -90,6 +89,13 @@
         "setting-up-and-getting-started": "Setting up and getting started",
         "setting-up-the-project-in-your-computer": "Setting up the project in your computer",
         "before-writing-code": "Before writing code"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "Temp.md",
+      "headings": {
+        "proposed-undo-redo-feature": "[Proposed] Undo/redo feature"
       },
       "headingKeywords": {}
     },
