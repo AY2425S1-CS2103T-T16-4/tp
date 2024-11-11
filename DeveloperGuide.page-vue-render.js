@@ -182,7 +182,7 @@ with(this){return _c('p',[_c('strong',[_v("Target user profile")]),_v(": NUS SOC
 with(this){return _c('p',[_c('strong',[_v("Value proposition")]),_v(":")])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_v("Easier management of administrative tasks")]),_v(" "),_c('li',[_v("Easier for users who are more proficient with "),_c('em',[_v("CLI - interface")])]),_v(" "),_c('li',[_v("Separate work and personal tasks / messages")])])}
+with(this){return _c('ul',[_c('li',[_v("Easier management of administrative tasks (e.g. tracking student attendance, assignments, and grades)")]),_v(" "),_c('li',[_v("Increases productivity of users who are more proficient with "),_c('em',[_v("CLI - interface")])]),_v(" "),_c('li',[_v("Provides a more organised way to manage student data")]),_v(" "),_c('li',[_v("Separate work and personal tasks / messages")])])}
 },function anonymous(
 ) {
 with(this){return _c('h3',{attrs:{"id":"user-stories"}},[_v("User stories"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#user-stories","onclick":"event.stopPropagation()"}})])}
@@ -311,6 +311,6 @@ with(this){return _c('h3',{attrs:{"id":"saving-data"}},[_v("Saving data"),_c('a'
 with(this){return _c('ol',[_c('li',[_c('p',[_v("Dealing with missing/corrupted data files")]),_v(" "),_c('ol',[_c('li',[_c('em',[_v("{explain how to simulate a missing/corrupted file, and the expected behavior}")])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Tue, 12 Nov 2024, 0:10:52 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Tue, 12 Nov 2024, 0:19:24 GMT+8]")])])])}
 }];
   
