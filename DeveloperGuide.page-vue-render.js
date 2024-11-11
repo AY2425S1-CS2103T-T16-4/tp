@@ -260,7 +260,7 @@ with(this){return _c('ol',[_c('li',[_c('p',[_v("Tutor requests to delete a stude
 with(this){return _c('p',[_c('strong',[_v("Extensions")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_c('p',[_v("3a. The student name does not exist in the system.")]),_v(" "),_c('ul',[_c('li',[_v("3a1. Teletutors App displays an error message: "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("This student is not in your student list.")]),_v("\nUse case resumes from Step 3.")])])]),_v(" "),_c('li',[_c('p',[_v("3b. There are multiple students that share the same name in the system.")]),_v(" "),_c('ul',[_c('li',[_v("3b1. Teletutors App displays a list of student numbers of students with the same name.\nUse case resumes from Step 3.")])])]),_v(" "),_c('li',[_c('p',[_v("3c. The student number does not exist in the system.")]),_v(" "),_c('ul',[_c('li',[_v("3c1. Teletutors App displays an error message: "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("This student is not in your student list.")]),_v("\nUse case resumes from Step 3.")])])])])}
+with(this){return _c('ul',[_c('li',[_c('p',[_v("3a. The student name does not exist in the system.")]),_v(" "),_c('ul',[_c('li',[_c('p',[_v("3a1. Teletutors App informs the tutor that the student cannot be found.")]),_v(" "),_c('p',[_v("Use case resumes from Step 3.")])])])]),_v(" "),_c('li',[_c('p',[_v("3b. There are multiple students that share the same name in the system.")]),_v(" "),_c('ul',[_c('li',[_c('p',[_v("3b1. Teletutors App informs the tutor that there are multiple students with the same name.")]),_v(" "),_c('p',[_v("Use case resumes from Step 3.")])])])]),_v(" "),_c('li',[_c('p',[_v("3c. The student number does not exist in the system.")]),_v(" "),_c('ul',[_c('li',[_c('p',[_v("3c1. Teletutors App informs the tutor that the student cannot be found.")]),_v(" "),_c('p',[_v("Use case resumes from Step 3.")])])])])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Use case: Add an assignment to a student")])])}
@@ -311,6 +311,6 @@ with(this){return _c('h3',{attrs:{"id":"saving-data"}},[_v("Saving data"),_c('a'
 with(this){return _c('ol',[_c('li',[_c('p',[_v("Dealing with missing/corrupted data files")]),_v(" "),_c('ol',[_c('li',[_c('em',[_v("{explain how to simulate a missing/corrupted file, and the expected behavior}")])])])]),_v(" "),_c('li',[_c('p',[_c('em',[_v("{ more test cases …​ }")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Mon, 11 Nov 2024, 21:08:19 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Mon, 11 Nov 2024, 21:09:13 GMT+8]")])])])}
 }];
   
