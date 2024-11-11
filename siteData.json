@@ -124,6 +124,7 @@
         "editing-a-student-edits": "Editing a student : edits",
         "locating-student-by-name-view": "Locating student by name: view",
         "deleting-a-specific-student-deletes": "Deleting a specific student : deletes",
+        "clearing-all-data-and-deleting-all-students-deleteall": "Clearing all data and deleting all students : deleteall",
         "attendance-commands": "Attendance Commands",
         "marking-attendance-markat": "Marking Attendance : markat",
         "marking-tutorial-group-attendance-to-present-markpresentall": "Marking Tutorial Group Attendance to Present : markpresentall",
