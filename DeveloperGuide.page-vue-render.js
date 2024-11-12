@@ -323,7 +323,7 @@ with(this){return _c('h3',{attrs:{"id":"input-for-grade-is-case-sensitive"}},[_v
 with(this){return _c('h3',{attrs:{"id":"input-for-name-in-view-is-case-sensitive"}},[_v("Input for name in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("view")]),_v(" is case-sensitive"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#input-for-name-in-view-is-case-sensitive","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
-with(this){return _c('p',[_v("Currently, the input for name in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("view")]),_v(" is case-sensitive which may be inconvenient for the user. We plan to make thg input for name in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("view")]),_v(" case-insensitive.")])}
+with(this){return _c('p',[_v("Currently, the input for name in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("view")]),_v(" is case-sensitive which may be inconvenient for the user. We plan to make the input for name in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("view")]),_v(" case-insensitive.")])}
 },function anonymous(
 ) {
 with(this){return _c('h3',{attrs:{"id":"prevent-duplicate-phone-numbers"}},[_v("Prevent duplicate phone numbers."),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#prevent-duplicate-phone-numbers","onclick":"event.stopPropagation()"}})])}
@@ -344,6 +344,6 @@ with(this){return _c('h3',{attrs:{"id":"increase-specificity-of-deadline"}},[_v(
 with(this){return _c('h3',{attrs:{"id":"track-submission-dates-for-assignments"}},[_v("Track submission dates for assignments"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#track-submission-dates-for-assignments","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Tue, 12 Nov 2024, 13:20:26 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Tue, 12 Nov 2024, 13:22:39 GMT+8]")])])])}
 }];
   
