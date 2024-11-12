@@ -60,7 +60,8 @@
         "glossary": "Glossary",
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for Manual Testing",
         "launch-and-shutdown": "Launch and shutdown",
-        "deleting-a-student": "Deleting a Student"
+        "deleting-a-student": "Deleting a Student",
+        "marking-attendance-for-a-tutorial-group": "Marking Attendance for a Tutorial Group"
       },
       "headingKeywords": {}
     },
