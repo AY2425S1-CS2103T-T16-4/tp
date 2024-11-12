@@ -61,7 +61,18 @@
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for Manual Testing",
         "launch-and-shutdown": "Launch and shutdown",
         "deleting-a-student": "Deleting a Student",
-        "marking-attendance-for-a-tutorial-group": "Marking Attendance for a Tutorial Group"
+        "marking-attendance-for-a-tutorial-group": "Marking Attendance for a Tutorial Group",
+        "appendix-planned-enhancements": "Appendix: Planned Enhancements",
+        "list-students-by-other-fields": "List students by other fields",
+        "view-assignment-details": "View assignment details",
+        "input-for-grade-is-case-sensitive": "Input for grade is case-sensitive",
+        "input-for-name-in-view-is-case-sensitive": "Input for name in view is case-sensitive",
+        "prevent-duplicate-phone-numbers": "Prevent duplicate phone numbers.",
+        "allow-names-to-include-certain-special-characters": "Allow names to include certain special characters.",
+        "sort-the-displayed-list-of-students": "Sort the displayed list of students",
+        "limit-the-length-of-inputs": "Limit the length of inputs",
+        "increase-specificity-of-deadline": "Increase specificity of deadline",
+        "track-submission-dates-for-assignments": "Track submission dates for assignments"
       },
       "headingKeywords": {}
     },
