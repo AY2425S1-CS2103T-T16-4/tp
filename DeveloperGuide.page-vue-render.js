@@ -344,6 +344,6 @@ with(this){return _c('h3',{attrs:{"id":"increase-specificity-of-deadline"}},[_v(
 with(this){return _c('h3',{attrs:{"id":"track-submission-dates-for-assignments"}},[_v("Track submission dates for assignments"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#track-submission-dates-for-assignments","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Tue, 12 Nov 2024, 16:58:17 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Sun, 24 Nov 2024, 23:19:15 GMT+8]")])])])}
 }];
   
